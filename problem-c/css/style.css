@@ -1,15 +1,68 @@
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
 .container {
   display: flex;
   box-sizing: border-box;
+  height: 100%;
 }
 
+.first {
+  flex-basis: 240px;
+}
 
+.second {
+  flex: 1;
+  background-color: #eee;
+}
+
+.third {
+  flex-basis: 180px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.container section {
+  padding: 1em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 250px;
+  background-color: white;
+  margin: .5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+.card p {
+  margin: .5rem 1rem;
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
